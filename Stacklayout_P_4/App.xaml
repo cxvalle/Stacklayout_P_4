@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stacklayout_P_4.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Colores-->
+            <Color x:Key="LabelTextColor">#000000</Color>
+
+             <!--Tamaño-->
+            <x:Double x:Key="LableFontSize">50</x:Double>
+            
+            <!--Tipo -->
+            <OnPlatform x:Key="LabelFont"
+                    x:TypeArguments="x:String">
+                <On Platform="iOS">sans-serif</On>
+                <On Platform="Android">Arial</On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="LabelFontAttributes"
+                    x:TypeArguments="x:String">
+                <On Platform="iOS">Bold</On>
+                <On Platform="Android">Bold</On>
+            </OnPlatform>
+            
+            <!--Tipo de Letra Personalizada-->
+            <Style x:Key="ProfileLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource
+                    LabelTextColor}">
+                </Setter>
+
+
+                <Setter Property="FontSize" Value="{StaticResource
+                    LableFontSize}">
+                </Setter>
+                
+                <Setter Property="FontFamily" Value="{StaticResource
+                    LabelFont}">
+                </Setter>
+
+                <Setter Property="FontAttributes" Value="{StaticResource
+                   LabelFontAttributes}">
+                </Setter>                
+                <Setter Property="HorizontalTextAlignment"
+                    Value="Center">
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
